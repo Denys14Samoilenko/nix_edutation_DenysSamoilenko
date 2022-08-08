@@ -60,3 +60,21 @@ studentArr.forEach((student, index) => {
 });
 
 console.log(student1.getNotPay());
+
+class CustomString {
+	constructor(reverse, ucFirst, ucWords) {
+		this.revers = reverse;
+	}
+	get reverse() {
+		return this.reverse();
+	}
+	reverse() {
+		let str = 'qwerty';
+		return str.split('').reverse().join('');
+	}
+}
+
+const myString = new CustomString();
+
+myString.reverse();
+console.log(myString.reverse());
