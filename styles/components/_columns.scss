@@ -1,0 +1,22 @@
+.row {
+   margin: -10px;
+}
+
+.row>.column {
+   padding: 10px;
+}
+
+.row-large {}
+
+.row-large .column {}
+
+.row-medium {}
+
+.row-medium .column {}
+
+@media (min-width: 480px) {
+   .row {
+      display: flex;
+      flex-wrap: wrap;
+   }
+}

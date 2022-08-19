@@ -1,0 +1,55 @@
+.button {
+   display: inline-block;
+   margin: 0;
+   border-radius: 0;
+   border: 1px solid transparent;
+   font-size: 14px;
+   padding: 8px 16px;
+   outline: none;
+   text-transform: none;
+   text-align: center;
+   text-decoration: none;
+   appearance: none;
+   -moz-appearance: none;
+   -webkit-appearance: none;
+ }
+ .button:hover {
+   text-decoration: none;
+ }
+ .button:focus {
+   outline: none;
+ }
+ 
+ .button-primary {
+   color: #ffffff;
+   background-color: green;
+ }
+ 
+ .button-primary:hover {
+   color: green;
+   background-color: #ffffff;
+   border-color: green;
+ }
+ .button-danger {
+   color: #ffffff;
+   background-color: red;
+ }
+ 
+ .button-danger:hover {
+   color: red;
+   background-color: #ffffff;
+   border-color: red;
+ }
+ 
+ .button-large {
+   padding: 22px 64px;
+ }
+ 
+ .button-medium {
+   padding: 12px 24px;
+ }
+ 
+ .button-full {
+   width: 100%;
+ }
+ 
