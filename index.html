@@ -9,7 +9,49 @@
 </head>
 
 <body>
-   <script src="js/main.js"></script>
-</body>
+   <!DOCTYPE html>
+   <html lang="en">
 
-</html>
+   <head>
+      <meta charset="UTF-8">
+      <title>Document</title>
+   </head>
+
+   <!DOCTYPE html>
+   <html lang="en">
+
+   <head>
+      <meta charset="UTF-8">
+      <title>Document</title>
+   </head>
+
+   <body>
+      <div class="form-wrap">
+         <div class="profile">
+            <h1>Регистрация</h1>
+         </div>
+         <form name="submitForm" novalidate>
+            <div>
+               <label for="name">Имя</label>
+               <input id="name" type="text" name="name" required minlength="5">
+            </div>
+            <div>
+               <label for="email">E-mail</label>
+               <input id="email" type="email" name="email" required>
+            </div>
+            <div>
+               <label for="password">Password</label>
+               <input id="password" type="password" name="password" required minlength="4" manlength="10">
+            </div>
+            <div>
+               <label for="confirmPassword">Confirm password</label>
+               <input id="confirmPassword" type="password" name="confirmPassword" required minlength="4" manlength="10">
+            </div>
+            <button type="submit">Отправить</button>
+         </form>
+      </div>
+
+      <script src="js/main.js"></script>
+   </body>
+
+   </html>
