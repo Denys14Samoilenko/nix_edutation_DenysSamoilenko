@@ -1,4 +1,6 @@
 .row {
+   display: flex;
+   flex-wrap: wrap;
    margin: -10px;
 }
 
@@ -6,17 +8,19 @@
    padding: 10px;
 }
 
-.row-large {}
+.row-large {
 
-.row-large .column {}
+   margin: -30px;
+}
+
+.row-large .column {
+   padding: 30px;
+}
 
 .row-medium {}
 
 .row-medium .column {}
 
 @media (min-width: 480px) {
-   .row {
-      display: flex;
-      flex-wrap: wrap;
-   }
+   .row {}
 }

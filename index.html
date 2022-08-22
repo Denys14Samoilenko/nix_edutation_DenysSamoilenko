@@ -11,8 +11,43 @@
 </head>
 
 <body>
-   <script src="js/items.js"></script>
-   <script src="js/main.js"></script>
+   <div class="wrapper">
+      <div class="container">
+         <header class="header">
+            <div class="header__body">
+               <a class="logo"><img src="img/icons/logo.svg" alt="logo"></a>
+               <div class="cart__body">
+                  <a href="#">
+                     <figure class="cart__icon">
+                        <img src="img/icons/cart.svg" alt="icon-cart">
+                     </figure>
+                  </a>
+                  <span class="cart__counter">3</span>
+               </div>
+            </div>
+         </header>
+         <main class="main">
+            <section class="section__hero">
+               <div class="hero__body">
+                  <h1 class="hero__title">IPad Air</h1>
+                  <button class="button button-primary">Add to cart</button>
+               </div>
+            </section>
+            <section class="section__products">
+               <form class="products__search form-control">
+                  <label for="product-search"></label>
+                  <input class="input products__input" type="search" id="product-search" name="product-search"
+                     placeholder="Enter device name...">
+                  <button class="filter__button "><img src="img/icons/filter.svg" alt=""></button>
+                  <button class="settings_button"><img src="img/icons/settings.svg" alt=""></button>
+               </form>
+               <div class="row row-large" id="cards-container"> </div>
+            </section>
+         </main>
+      </div>
+   </div>
+
+   <script type="module" src="js/main.js"></script>
 </body>
 
 </html>

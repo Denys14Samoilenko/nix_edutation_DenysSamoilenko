@@ -1,14 +1,128 @@
 .card {
+   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
+   border-radius: 10px;
+   border: 1px solid #E0E0E0;
+   position: relative;
+   border-bottom: 0;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+
+   .like-empty {
+      width: 25px;
+      position: absolute;
+      right: 15px;
+      top: 15px;
+   }
+
+   &__body {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      color: $gray;
+      padding: 14px 14px 20px 14px;
+      border-bottom: 0;
+      flex-grow: 1;
+   }
+
+   &__title {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 28px;
+      color: $dark;
+   }
+
+   &__image {
+      height: 100%;
+      display: flex;
+      align-items: center;
+   }
+
+   &__description {
+      list-style: none;
+      position: relative;
+      padding-left: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+
+   &__description>li {
+      padding-bottom: 10px;
+
+   }
+
+   &__availability {
+      text-align: left;
+      max-width: 100px;
+   }
+
+   &__availability>span {
+      font-weight: 700;
+   }
+
+   &__availability::before {
+      content: url(../img/icons/check.svg);
+      border: 1px solid #1BC943;
+      position: absolute;
+      border-radius: 50%;
+      left: 50px;
+      top: -2px;
+      padding: 0px 2px;
+
+      @media(max-width:960px) {
+         left: 65px;
+      }
+
+
+   }
+
+   &__price {
+      margin-left: -15px;
+   }
+
+   &__price>span {
+      font-weight: 700;
+   }
+
+   &__footer {
+      padding: 19px 23px 29px 13px;
+      background-color: #DAE2EA;
+      color: #3B3E66;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid transparent;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+   }
 }
 
-.card-title {
+.footer-reviews,
+.footer-order {
+   max-width: 200px;
+   text-align: left;
+   list-style: none;
+   position: relative;
 }
 
-.card-description {
+.footer-reviews>li:first-child {
+   padding-bottom: 6px;
+   font-weight: 700;
 }
 
-.card-image {
+.footer-order {
+   text-align: center;
 }
 
-.card-image > img {
+.footer-order>li:first-child {
+   padding-bottom: 6px;
+   font-weight: 700;
+}
+
+.footer-reviews:before {
+   content: url(../img/icons/like_filled.svg);
+   position: absolute;
+   left: 0;
+   top: -2px;
 }

@@ -1,8 +1,32 @@
+.section {
+
+   &__hero {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 520px;
+      background-image: url(../img/banners/ipad_air_banner.jpg);
+      background-repeat: no-repeat;
+      background-position-y: 0;
+      background-position-x: 50%;
+      background-size: cover;
+
+
+   }
+}
+
 .hero {
-}
 
-.hero-title {
-}
+   &__body {
+      text-align: center;
+   }
 
-.hero-subtitle {
+   &__title {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 72px;
+      line-height: 84px;
+      color: $white;
+      margin: 0px 0px 22px 0px;
+   }
 }
