@@ -34,14 +34,81 @@
                </div>
             </section>
             <section class="section__products">
-               <form class="products__search form-control">
+               <div class="products__search form-control">
                   <label for="product-search"></label>
                   <input class="input products__input" type="search" id="product-search" name="product-search"
                      placeholder="Enter device name...">
-                  <button class="filter__button "><img src="img/icons/filter.svg" alt=""></button>
+                  <button id="filter" class="filter__button"><img src="img/icons/filter.svg" alt=""></button>
                   <button class="settings_button"><img src="img/icons/settings.svg" alt=""></button>
-               </form>
-               <div class="row row-large" id="cards-container"> </div>
+               </div>
+               <div class="row row-large">
+                  <div class="column width-1-3 none" id="accordion-column">
+                     <div class="accordion-wrap">
+                        <button class="accordion">Price</button>
+                        <div class="panel">
+                           <label for="">From<input type="text"></label>
+                           <label for="">To<input type="text"></label>
+                        </div>
+                        <button class="accordion">Color</button>
+                        <div class="panel">
+                           <div class="row">
+                              <div class="acc-df">
+                                 <label for=""><input type="checkbox" name="" id="">Red</label>
+                                 <label for=""><input type="checkbox" name="" id="">Black</label>
+                                 <label for=""><input type="checkbox" name="" id="">Blue</label>
+                                 <label for=""><input type="checkbox" name="" id="">Gold</label>
+                              </div>
+                              <div class="acc-df">
+                                 <label for=""><input type="checkbox" name="" id="">Green</label>
+                                 <label for=""><input type="checkbox" name="" id="">White</label>
+                                 <label for=""><input type="checkbox" name="" id="">Grey</label>
+                                 <label for=""><input type="checkbox" name="" id="">Yellow</label>
+                              </div>
+
+                           </div>
+                        </div>
+                        <button class="accordion">Memory</button>
+                        <div class="panel">
+                           <div class="row">
+                              <div class="acc-df">
+                                 <label for=""><input type="checkbox" name="" id="">32 Gb</label>
+                                 <label for=""><input type="checkbox" name="" id="">64 Gb</label>
+                                 <label for=""><input type="checkbox" name="" id="">128 Gb</label>
+                                 <label for=""><input type="checkbox" name="" id="">256 Gb</label>
+                              </div>
+                              <div class="acc-df">
+                                 <label for=""><input type="checkbox" name="" id="">512 Gb</label>
+                                 <label for=""><input type="checkbox" name="" id="">1 Tb</label>
+                                 <label for=""><input type="checkbox" name="" id="">2 Tb</label>
+                                 <label for=""><input type="checkbox" name="" id="">4 Tb</label>
+                              </div>
+                           </div>
+                        </div>
+                        <button class="accordion">OS</button>
+                        <div class="panel">
+                           <div class="acc-df">
+                              <label for=""><input type="checkbox" name="" id="">IOS</label>
+                              <label for=""><input type="checkbox" name="" id="">Mac OS</label>
+                              <label for=""><input type="checkbox" name="" id="">tvOs</label>
+                              <label for=""><input type="checkbox" name="" id="">Watch OS</label>
+                           </div>
+                        </div>
+                        <button class="accordion">Display</button>
+                        <div class="panel">
+                           <div class="acc-df">
+                              <label for=""><input type="checkbox" name="" id="">2-5 inch</label>
+                              <label for=""><input type="checkbox" name="" id="">5-7 inch</label>
+                              <label for=""><input type="checkbox" name="" id="">7-12 inch</label>
+                              <label for=""><input type="checkbox" name="" id="">12-16 inch</label>
+                              <label for=""><input type="checkbox" name="" id="">+16 inch</label>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="column" id="card-column">
+                     <div class="row row-large" id="cards-container"></div>
+                  </div>
+               </div>
             </section>
          </main>
       </div>

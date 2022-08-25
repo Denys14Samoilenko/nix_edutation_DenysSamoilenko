@@ -42,7 +42,7 @@ function createCard(data) {
 
 itemsArr.map(item => {
 	const divElement = document.createElement('div');
-	divElement.className = 'column width-1-3 width-1-2-lg';
+	divElement.className = 'column width-1-3 width-1-3-lg';
 	divElement.innerHTML = createCard(item);
 	cardsContainer.appendChild(divElement);
 });
@@ -50,3 +50,39 @@ itemsArr.map(item => {
 function getRandomArbitrary(min, max) {
 	return Math.random() * (max - min) + min;
 }
+let acc = document.getElementsByClassName('accordion');
+let i;
+
+for (i = 0; i < acc.length; i++) {
+	acc[i].addEventListener('click', function () {
+		this.classList.toggle('active');
+		let panel = this.nextElementSibling;
+		if (panel.style.display === 'block') {
+			panel.style.display = 'none';
+		} else {
+			panel.style.display = 'block';
+		}
+	});
+}
+
+const filterBtn = document.querySelector('#filter');
+const accCol = document.querySelector('#accordion-column');
+const cardCol = document.querySelector('#card-column');
+
+filterBtn.addEventListener('click', function (e) {
+	e.preventDefault();
+	this.classList.toggle('active');
+	accCol.classList.toggle('none');
+	if (this.classList.contains('active')) {
+		cardCol.classList.add('width-2-3');
+		for (let i = 0; i < cardsContainer.children.length; i++) {
+			cardsContainer.children[i].classList.remove('width-1-3');
+			cardsContainer.children[i].classList.add('width-1-2');
+		}
+	} else {
+		cardCol.classList.remove('width-2-3');
+		for (let i = 0; i < cardsContainer.children.length; i++) {
+			cardsContainer.children[i].classList.add('width-1-3');
+		}
+	}
+});

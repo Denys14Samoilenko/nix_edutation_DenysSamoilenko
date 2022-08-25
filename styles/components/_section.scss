@@ -12,3 +12,57 @@
    background-position: 23px;
    background-size: 20px;
 }
+
+.accordion-wrap {
+   width: 300px;
+   border: 1px solid $gray;
+   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+   border-radius: 5px;
+   overflow: hidden;
+}
+
+
+.accordion {
+   color: #444;
+   cursor: pointer;
+   padding: 18px;
+   width: 100%;
+   text-align: left;
+   border: none;
+   outline: none;
+   transition: 0.4s;
+
+}
+
+
+
+
+
+.active,
+.accordion:hover {
+   background-color: #ccc;
+}
+
+
+.panel {
+   padding: 18px;
+   background-color: $white;
+   display: none;
+   overflow: hidden;
+
+}
+
+label>input[type="text"] {
+   width: 100%;
+
+}
+
+label>input {
+   margin: 0px 10px 10px 0px;
+}
+
+.acc-df {
+   display: flex;
+   flex-direction: column;
+   width: 50%;
+}

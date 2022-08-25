@@ -153,3 +153,11 @@
       width: 16.66%;
    }
 }
+
+.width-auto {
+   flex-grow: 1;
+}
+
+.column.none {
+   display: none;
+}
