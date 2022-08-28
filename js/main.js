@@ -68,6 +68,7 @@ for (i = 0; i < acc.length; i++) {
 const filterBtn = document.querySelector('#filter');
 const accCol = document.querySelector('#accordion-column');
 const cardCol = document.querySelector('#card-column');
+const cards = document.querySelectorAll('.card');
 
 filterBtn.addEventListener('click', function (e) {
 	e.preventDefault();
@@ -86,3 +87,68 @@ filterBtn.addEventListener('click', function (e) {
 		}
 	}
 });
+
+cards.forEach(element => {
+	element.addEventListener('click', function (e) {
+		e.preventDefault();
+		showmodal(itemsArr.find(item => item.id == element.id));
+	});
+});
+
+function showmodal(data) {
+	let overlay = document.createElement('div');
+
+	overlay.innerHTML = `
+    <div class="overlay">
+        <div class="modal-container">
+            <div class="modal-img">
+                <img class="modal-image" src="img/${data.imgUrl}" alt="">
+             </div>
+            <div class="modal-body">
+                <span class="modal-title">${data.name}</span>
+                <div class="modal-reviews">
+                    <div class="card__footer">
+                           <ul class="footer-reviews">
+                              <li>${
+																data.orderInfo.reviews
+															}% Positive reviews</li>
+                              <li>Above avarage</li>
+                           </ul>
+                           <ul class="footer-order">
+                              <li>${getRandomArbitrary(300, 1000).toFixed(
+																0
+															)}</li>
+                              <li>orders</li>
+                           </ul>
+                        </div>
+                </div>
+                <div class="info">
+                    <span>Color: <b>${data.color}</b></span>
+                    <span>Operating System: <b>${data.os}</b></span>
+                    <span>Chip: <b>${data.chip.name}</b></span>
+                    <span>Height: <b>${data.size.height}</b></span>
+                    <span>Width: <b>${data.size.width}</b></span>
+                    <span>Depth: <b>${data.size.depth}</b></span>
+                    <span>Weight: <b>${data.size.weight}</b></span>
+                </div>
+            </div>
+            <div class="modal-control">
+                <span class="modal-price">$ ${data.price}</span>
+                <span class="count-in-stock">Stock: <b>${
+									data.orderInfo.inStock
+								} pcs.</b> </span>
+                <button class="button button-primary">Add to cart</button>
+            </div>
+        </div>
+    </div>`;
+	overlay.addEventListener('click', hideOverlay);
+	overlay
+		.querySelector('.modal-container')
+		.addEventListener('click', e => e.stopPropagation());
+	document.body.appendChild(overlay);
+}
+
+function hideOverlay() {
+	const overlay = document.querySelector('.overlay').parentNode;
+	overlay.remove();
+}
